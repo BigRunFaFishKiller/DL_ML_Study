@@ -4,6 +4,8 @@ from keras import layers
 import numpy as np
 import matplotlib.pyplot as plt
 
+# 二分类，情感分类
+
 # 保留数据集中前10000个最常出现的单词
 (train_data, train_labels), (test_data, test_labels) = imdb.load_data(num_words=10000)
 
@@ -58,7 +60,7 @@ plt.show()
 
 plt.clf()
 
-# 绘制训练精度和训练精度
+# 绘制训练精度和验证精度
 acc = history_dict['accuracy']
 val_acc = history_dict['val_accuracy']
 plt.plot(epochs, acc, 'bo', label='Training accuracy')
